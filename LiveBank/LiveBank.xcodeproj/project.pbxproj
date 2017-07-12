@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		845176371F10724800F87E52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845176361F10724800F87E52 /* AppDelegate.swift */; };
+		845176391F10724800F87E52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845176381F10724800F87E52 /* ViewController.swift */; };
+		8451763C1F10724800F87E52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8451763A1F10724800F87E52 /* Main.storyboard */; };
+		8451763E1F10724800F87E52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8451763D1F10724800F87E52 /* Assets.xcassets */; };
+		845176411F10724800F87E52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8451763F1F10724800F87E52 /* LaunchScreen.storyboard */; };
+		8451764F1F10C63700F87E52 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8451764E1F10C63600F87E52 /* NotificationCenter.framework */; };
+		845176521F10C63700F87E52 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845176511F10C63700F87E52 /* TodayViewController.swift */; };
+		845176551F10C63700F87E52 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845176531F10C63700F87E52 /* MainInterface.storyboard */; };
+		845176591F10C63700F87E52 /* LiveBank Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8451764C1F10C63600F87E52 /* LiveBank Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		845176611F10DC8700F87E52 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845176601F10DC8700F87E52 /* HomeViewController.swift */; };
+		8470D5631F1609E90030ADF5 /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8470D5561F1609B50030ADF5 /* SwiftHTTP.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		845176571F10C63700F87E52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8451762B1F10724800F87E52 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8451764B1F10C63600F87E52;
+			remoteInfo = "LiveBank Widget";
+		};
+		8470D5551F1609B50030ADF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8470D54B1F1609B50030ADF5 /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BFD901619C8D8B500DD99B6;
+			remoteInfo = SwiftHTTP;
+		};
+		8470D5571F1609B50030ADF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8470D54B1F1609B50030ADF5 /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BFD902119C8D8B500DD99B6;
+			remoteInfo = SwiftHTTPTests;
+		};
+		8470D5591F1609B50030ADF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8470D54B1F1609B50030ADF5 /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D958025919E6EEEB003C8218;
+			remoteInfo = SwiftHTTPOSX;
+		};
+		8470D55B1F1609B50030ADF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8470D54B1F1609B50030ADF5 /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D958026319E6EEEB003C8218;
+			remoteInfo = SwiftHTTPOSXTests;
+		};
+		8470D55D1F1609B50030ADF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8470D54B1F1609B50030ADF5 /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5C135EC11C4733CD00AA3A01;
+			remoteInfo = SwiftHTTPtvOS;
+		};
+		8470D55F1F1609B50030ADF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8470D54B1F1609B50030ADF5 /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5C135ECA1C4733CE00AA3A01;
+			remoteInfo = SwiftHTTPtvOSTests;
+		};
+		8470D5611F1609B50030ADF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8470D54B1F1609B50030ADF5 /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5C135FA91C4737E200AA3A01;
+			remoteInfo = SwiftHTTPWatchOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8451765D1F10C63700F87E52 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				845176591F10C63700F87E52 /* LiveBank Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		845176331F10724800F87E52 /* LiveBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		845176361F10724800F87E52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		845176381F10724800F87E52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8451763B1F10724800F87E52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8451763D1F10724800F87E52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		845176401F10724800F87E52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		845176421F10724800F87E52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8451764C1F10C63600F87E52 /* LiveBank Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "LiveBank Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8451764E1F10C63600F87E52 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		845176511F10C63700F87E52 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		845176541F10C63700F87E52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		845176561F10C63700F87E52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		845176601F10DC8700F87E52 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8470D54B1F1609B50030ADF5 /* SwiftHTTP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftHTTP.xcodeproj; path = ../SwiftHTTP/SwiftHTTP.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		845176301F10724800F87E52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8470D5631F1609E90030ADF5 /* SwiftHTTP.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		845176491F10C63600F87E52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8451764F1F10C63700F87E52 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8451762A1F10724800F87E52 = {
+			isa = PBXGroup;
+			children = (
+				8470D54B1F1609B50030ADF5 /* SwiftHTTP.xcodeproj */,
+				845176351F10724800F87E52 /* LiveBank */,
+				845176501F10C63700F87E52 /* LiveBank Widget */,
+				8451764D1F10C63600F87E52 /* Frameworks */,
+				845176341F10724800F87E52 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		845176341F10724800F87E52 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				845176331F10724800F87E52 /* LiveBank.app */,
+				8451764C1F10C63600F87E52 /* LiveBank Widget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		845176351F10724800F87E52 /* LiveBank */ = {
+			isa = PBXGroup;
+			children = (
+				845176361F10724800F87E52 /* AppDelegate.swift */,
+				845176381F10724800F87E52 /* ViewController.swift */,
+				845176601F10DC8700F87E52 /* HomeViewController.swift */,
+				8451763A1F10724800F87E52 /* Main.storyboard */,
+				8451763D1F10724800F87E52 /* Assets.xcassets */,
+				8451763F1F10724800F87E52 /* LaunchScreen.storyboard */,
+				845176421F10724800F87E52 /* Info.plist */,
+			);
+			path = LiveBank;
+			sourceTree = "<group>";
+		};
+		8451764D1F10C63600F87E52 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8451764E1F10C63600F87E52 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		845176501F10C63700F87E52 /* LiveBank Widget */ = {
+			isa = PBXGroup;
+			children = (
+				845176511F10C63700F87E52 /* TodayViewController.swift */,
+				845176531F10C63700F87E52 /* MainInterface.storyboard */,
+				845176561F10C63700F87E52 /* Info.plist */,
+			);
+			path = "LiveBank Widget";
+			sourceTree = "<group>";
+		};
+		8470D54C1F1609B50030ADF5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8470D5561F1609B50030ADF5 /* SwiftHTTP.framework */,
+				8470D5581F1609B50030ADF5 /* SwiftHTTPTests.xctest */,
+				8470D55A1F1609B50030ADF5 /* SwiftHTTP.framework */,
+				8470D55C1F1609B50030ADF5 /* SwiftHTTPOSXTests.xctest */,
+				8470D55E1F1609B50030ADF5 /* SwiftHTTP.framework */,
+				8470D5601F1609B50030ADF5 /* SwiftHTTPtvOSTests.xctest */,
+				8470D5621F1609B50030ADF5 /* SwiftHTTP.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		845176321F10724800F87E52 /* LiveBank */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 845176451F10724800F87E52 /* Build configuration list for PBXNativeTarget "LiveBank" */;
+			buildPhases = (
+				8451762F1F10724800F87E52 /* Sources */,
+				845176301F10724800F87E52 /* Frameworks */,
+				845176311F10724800F87E52 /* Resources */,
+				8451765D1F10C63700F87E52 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				845176581F10C63700F87E52 /* PBXTargetDependency */,
+			);
+			name = LiveBank;
+			productName = LiveBank;
+			productReference = 845176331F10724800F87E52 /* LiveBank.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8451764B1F10C63600F87E52 /* LiveBank Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8451765A1F10C63700F87E52 /* Build configuration list for PBXNativeTarget "LiveBank Widget" */;
+			buildPhases = (
+				845176481F10C63600F87E52 /* Sources */,
+				845176491F10C63600F87E52 /* Frameworks */,
+				8451764A1F10C63600F87E52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LiveBank Widget";
+			productName = "LiveBank Widget";
+			productReference = 8451764C1F10C63600F87E52 /* LiveBank Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8451762B1F10724800F87E52 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = xxx;
+				TargetAttributes = {
+					845176321F10724800F87E52 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+					8451764B1F10C63600F87E52 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 8451762E1F10724800F87E52 /* Build configuration list for PBXProject "LiveBank" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8451762A1F10724800F87E52;
+			productRefGroup = 845176341F10724800F87E52 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8470D54C1F1609B50030ADF5 /* Products */;
+					ProjectRef = 8470D54B1F1609B50030ADF5 /* SwiftHTTP.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				845176321F10724800F87E52 /* LiveBank */,
+				8451764B1F10C63600F87E52 /* LiveBank Widget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		8470D5561F1609B50030ADF5 /* SwiftHTTP.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftHTTP.framework;
+			remoteRef = 8470D5551F1609B50030ADF5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8470D5581F1609B50030ADF5 /* SwiftHTTPTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwiftHTTPTests.xctest;
+			remoteRef = 8470D5571F1609B50030ADF5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8470D55A1F1609B50030ADF5 /* SwiftHTTP.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftHTTP.framework;
+			remoteRef = 8470D5591F1609B50030ADF5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8470D55C1F1609B50030ADF5 /* SwiftHTTPOSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwiftHTTPOSXTests.xctest;
+			remoteRef = 8470D55B1F1609B50030ADF5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8470D55E1F1609B50030ADF5 /* SwiftHTTP.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftHTTP.framework;
+			remoteRef = 8470D55D1F1609B50030ADF5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8470D5601F1609B50030ADF5 /* SwiftHTTPtvOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwiftHTTPtvOSTests.xctest;
+			remoteRef = 8470D55F1F1609B50030ADF5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8470D5621F1609B50030ADF5 /* SwiftHTTP.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftHTTP.framework;
+			remoteRef = 8470D5611F1609B50030ADF5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		845176311F10724800F87E52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				845176411F10724800F87E52 /* LaunchScreen.storyboard in Resources */,
+				8451763E1F10724800F87E52 /* Assets.xcassets in Resources */,
+				8451763C1F10724800F87E52 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8451764A1F10C63600F87E52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				845176551F10C63700F87E52 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8451762F1F10724800F87E52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				845176391F10724800F87E52 /* ViewController.swift in Sources */,
+				845176371F10724800F87E52 /* AppDelegate.swift in Sources */,
+				845176611F10DC8700F87E52 /* HomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		845176481F10C63600F87E52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				845176521F10C63700F87E52 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		845176581F10C63700F87E52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8451764B1F10C63600F87E52 /* LiveBank Widget */;
+			targetProxy = 845176571F10C63700F87E52 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8451763A1F10724800F87E52 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8451763B1F10724800F87E52 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8451763F1F10724800F87E52 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				845176401F10724800F87E52 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		845176531F10C63700F87E52 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				845176541F10C63700F87E52 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		845176431F10724800F87E52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		845176441F10724800F87E52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		845176461F10724800F87E52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LiveBank/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xxx.xxx.LiveBank;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		845176471F10724800F87E52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LiveBank/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xxx.xxx.LiveBank;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		8451765B1F10C63700F87E52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "LiveBank Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xxx.xxx.LiveBank.LiveBank-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		8451765C1F10C63700F87E52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "LiveBank Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xxx.xxx.LiveBank.LiveBank-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8451762E1F10724800F87E52 /* Build configuration list for PBXProject "LiveBank" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				845176431F10724800F87E52 /* Debug */,
+				845176441F10724800F87E52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		845176451F10724800F87E52 /* Build configuration list for PBXNativeTarget "LiveBank" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				845176461F10724800F87E52 /* Debug */,
+				845176471F10724800F87E52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8451765A1F10C63700F87E52 /* Build configuration list for PBXNativeTarget "LiveBank Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8451765B1F10C63700F87E52 /* Debug */,
+				8451765C1F10C63700F87E52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8451762B1F10724800F87E52 /* Project object */;
+}

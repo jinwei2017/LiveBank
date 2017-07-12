@@ -10,12 +10,14 @@ import UIKit
 import SwiftHTTP
 
 class HomeViewController: UIViewController {
-
+    
+    lazy var banks:Array<Any> = Array()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        balance()
+        initModel()
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -27,22 +29,49 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    func balance() {
+    override func viewDidAppear(_ animated: Bool) {
+        // try to get balance info from your bank
+        
+    }
+    
+    func initModel() {
+        apiBanks()
+    }
+    
+    func apiBanks() {
         do {
-            let opt = try HTTP.GET("https://api.teller.io/accounts", headers: ["Authorization": "Bearer MUHWENYT5BZHWJERCTFN3KMJ74TUWPLNE3BOAB6KGUWDHRF4EMDPR7HJNQFZ5LYF"])
+            let opt = try HTTP.GET("https://api.teller.io/accounts",
+                                   headers: ["Authorization": "Bearer MUHWENYT5BZHWJERCTFN3KMJ74TUWPLNE3BOAB6KGUWDHRF4EMDPR7HJNQFZ5LYF"])
             opt.start { response in
                 if let err = response.error {
                     print("error: \(err.localizedDescription)")
-                    return //also notify app of failure as needed
+                    return
                 }
-                print("opt finished: \(response.description)")
-                //print("data is: \(response.data)") access the response of the data with response.data
+                
+                if let text = response.text {
+                    print("response: \(text)")
+                    
+                    if let data = text.data(using: .utf8) {
+                        do {
+                            let banks = try JSONSerialization.jsonObject(with: data, options: []) as! Array<Any>
+                            let bank0 = banks[0] as! Dictionary<String, Any>
+                            let balance = bank0["balance"] as? String
+                            let doubleBalance = Double(balance!)
+                            print(doubleBalance)
+//                            self.banks.removeAll()
+//                            self.banks = banks
+                        } catch {
+                            print(error.localizedDescription)
+                        }
+                    }
+                }
             }
         } catch let error {
             print("got an error creating the request: \(error)")
         }
     }
+    
+    
     /*
     // MARK: - Navigation
 

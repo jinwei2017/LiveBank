@@ -108,6 +108,7 @@
 		845176561F10C63700F87E52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		845176601F10DC8700F87E52 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8470D54B1F1609B50030ADF5 /* SwiftHTTP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftHTTP.xcodeproj; path = ../SwiftHTTP/SwiftHTTP.xcodeproj; sourceTree = "<group>"; };
+		8470D5641F161AC40030ADF5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +168,7 @@
 		8451764D1F10C63600F87E52 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8470D5641F161AC40030ADF5 /* Foundation.framework */,
 				8451764E1F10C63600F87E52 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;

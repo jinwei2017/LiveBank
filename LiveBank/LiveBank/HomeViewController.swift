@@ -11,13 +11,22 @@ import SwiftHTTP
 
 class HomeViewController: UIViewController {
     
-    lazy var banks:Array<Any> = Array()
+    var banks:Array<Any> = []
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var availableBalanceLabel: UILabel!
+    var refreshControl:UIRefreshControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         initModel()
+        initView()
+        refreshViewWith(Banks: banks)
+        
+        // Update your balance
+        refresh(sender: self)
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -35,6 +44,31 @@ class HomeViewController: UIViewController {
     }
     
     func initModel() {
+        banks.removeAll()
+    }
+    
+    func initView() {
+        refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "Updating your balance...",
+                                                            attributes: [NSForegroundColorAttributeName: UIColor.white])
+        refreshControl.addTarget(self, action: #selector(self.refresh), for: UIControlEvents.valueChanged)
+        scrollView.addSubview(refreshControl)
+    }
+    
+    func refreshViewWith(Banks banks: Array<Any>) {
+        var balance = 0.0
+        
+        if banks.count > 0 {
+            let bank = banks.first as! Dictionary<String, Any>
+            let balanceString = bank["balance"] as! String
+            balance = Double(balanceString)!
+        }
+        
+        availableBalanceLabel.text = "£\(balance)"
+    }
+    
+    func refresh(sender:AnyObject) {
+        // teller api calls to update your balance
         apiBanks()
     }
     
@@ -45,6 +79,9 @@ class HomeViewController: UIViewController {
             opt.start { response in
                 if let err = response.error {
                     print("error: \(err.localizedDescription)")
+                    DispatchQueue.main.async {
+                        self.refreshControl.endRefreshing()
+                    }
                     return
                 }
                 
@@ -54,23 +91,34 @@ class HomeViewController: UIViewController {
                     if let data = text.data(using: .utf8) {
                         do {
                             let banks = try JSONSerialization.jsonObject(with: data, options: []) as! Array<Any>
-                            let bank0 = banks[0] as! Dictionary<String, Any>
-                            let balance = bank0["balance"] as? String
-                            let doubleBalance = Double(balance!)
-                            print(doubleBalance)
-//                            self.banks.removeAll()
-//                            self.banks = banks
+                            
+                            self.banks.removeAll()
+                            self.banks = banks
+                            
+                            DispatchQueue.main.async {
+                                self.refreshViewWith(Banks: banks)
+                                self.refreshControl.endRefreshing()
+                            }
+                            
                         } catch {
                             print(error.localizedDescription)
+                            DispatchQueue.main.async {
+                                self.refreshControl.endRefreshing()
+                            }
+                            return
                         }
                     }
                 }
             }
         } catch let error {
             print("got an error creating the request: \(error)")
+            DispatchQueue.main.async {
+                self.refreshControl.endRefreshing()
+            }
+            return
         }
     }
-    
+
     
     /*
     // MARK: - Navigation

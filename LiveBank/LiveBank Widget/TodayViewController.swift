@@ -51,8 +51,23 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             let bank = banks.first as! Dictionary<String, Any>
             let balanceString = bank["balance"] as! String
             balance = Double(balanceString)!
+            
+            // store new Balance info
+            let userDefaults = UserDefaults.standard
+            userDefaults.setValue(balance, forKey: "balance")
+            userDefaults.synchronize()
         }
-        
+        else {
+            
+            // read old Balance info
+            let userDefaults = UserDefaults.standard
+            if let savedbalance = userDefaults.value(forKey: "balance") {
+                balance = savedbalance as! Double;
+            }
+            else {
+                balance = 0.0
+            }
+        }
         availableBalanceLabel.text = "£\(balance)"
     }
     
